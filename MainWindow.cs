@@ -31,6 +31,9 @@ namespace fractal
             drawingArea = new DrawingArea ();         
             drawingArea.Drawn += new DrawnHandler(OnDraw);
 
+
+            fractal=new Mandlebrot();
+
         }
 
         private void OnDraw (object o, DrawnArgs args)
@@ -40,12 +43,12 @@ namespace fractal
 			
 			if (surface != null)
 				surface.Dispose ();
-                
+
             cr = args.Cr;
             var allocation = widget.Allocation;
             surface = widget.Window.CreateSimilarSurface (Cairo.Content.Color, allocation.Width, allocation.Height);
             cr.SetSourceSurface (surface, 0, 0);
-            screen = new Screen( ref drawingArea, ref cr);
+            screen = new Screen( ref drawingArea, ref cr, ref fractal);
             screen.Paint();
             
             //Cairo.Context cr =  args.Cr;

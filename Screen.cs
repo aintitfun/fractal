@@ -8,11 +8,13 @@ namespace fractal
         private MainWindow win=new MainWindow();
         private DrawingArea drawingArea;
         private Cairo.Context cr;
+        IFractal fractal;
 
-        public Screen(ref DrawingArea inDrawingArea, ref Cairo.Context inCR)
+        public Screen(ref DrawingArea inDrawingArea, ref Cairo.Context inCR, ref IFractal inFractal)
         {
             drawingArea=inDrawingArea;
             cr=inCR;
+            fractal=inFractal;
         }
         public void Pset (int x, int y)
         {
@@ -28,7 +30,7 @@ namespace fractal
         {
             cr.SetSourceRGB (0.1, 0.1, 1);
             
-            IFractal fractal=new Mandlebrot();
+            
             foreach (Point point in fractal.Calculate())
             {
                 cr.Rectangle(point.x,point.y,point.x+1,point.y+1);
