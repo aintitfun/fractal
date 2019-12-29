@@ -5,11 +5,8 @@ namespace fractal
     {
         private int iterations;
 
-        public void Paint(ref Screen s)
-        {
-            s.Pset(100,100);
-        }
-        public abstract List<Point> Calculate();
+
+        public abstract List<Point> Calculate(Point leftUpCorner, Point rightDownCorner, Point step);
 
     }
 }

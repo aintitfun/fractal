@@ -4,7 +4,6 @@ namespace fractal
 {
     public interface IFractal
     {
-        public void Paint(ref Screen s);
-        public List<Point> Calculate();
+        public List<Point> Calculate(Point leftUpCorner, Point rightDownCorner, Point step);
     }
 }

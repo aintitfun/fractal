@@ -48,7 +48,7 @@ namespace fractal
             var allocation = widget.Allocation;
             surface = widget.Window.CreateSimilarSurface (Cairo.Content.Color, allocation.Width, allocation.Height);
             cr.SetSourceSurface (surface, 0, 0);
-            screen = new Screen( ref drawingArea, ref cr, ref fractal);
+            screen = new Screen( ref drawingArea, ref cr, ref fractal, this);
             screen.Paint();
             
             //Cairo.Context cr =  args.Cr;
