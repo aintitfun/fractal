@@ -2,14 +2,8 @@ using System.Collections.Generic;
 
 namespace fractal
 {
-    public class Mandlebrot : Fractal
+    public class SimpleTestDraw : Fractal
     {
-        public Mandlebrot()
-        {
-            Iterations=0;
-            Center=new Point(0,0);
-            ScaleFactor=1;
-        }
         public override List<Point> Calculate(Point leftUpCorner, Point rightDownCorner, Point step)
         {
             List<Point> listPoint= new List<Point>();

@@ -3,7 +3,9 @@ namespace fractal
 {
     public abstract class Fractal : IFractal
     {
-        private int iterations;
+        public int Iterations {get;set;}
+        public Point Center{get;set;}
+        public double ScaleFactor{get;set;}
 
 
         public abstract List<Point> Calculate(Point leftUpCorner, Point rightDownCorner, Point step);
