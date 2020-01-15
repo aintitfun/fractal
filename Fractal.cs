@@ -3,7 +3,7 @@ namespace fractal
 {
     public abstract class Fractal : IFractal
     {
-        public int Iterations {get;set;}
+        public int MaxIterations {get;set;}
         public Point Center{get;set;}
         public double ScaleFactor{get;set;}
 

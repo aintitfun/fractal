@@ -1,3 +1,4 @@
+/*
 using System.Collections.Generic;
 
 namespace fractal
@@ -13,7 +14,7 @@ namespace fractal
             
                 for (double j=leftUpCorner.y;j<rightDownCorner.y;j+=step.y)
                 {
-                    listPoint.Add(new Point(i,j,0));
+                    listPoint.Add(new Point);
                 }
                     
             }
@@ -21,3 +22,4 @@ namespace fractal
         }
     }
 }
+*/
