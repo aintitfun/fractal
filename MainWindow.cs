@@ -2,6 +2,7 @@ using System;
 using Gtk;
 using UI = Gtk.Builder.ObjectAttribute;
 
+
 namespace fractal
 {
     public class MainWindow : Window
@@ -70,6 +71,12 @@ namespace fractal
         {
             _counter++;
             _label1.Text = "Hello World! This button has been clicked " + _counter + " time(s).";
+        }
+        private void OnClick(object sender,ButtonPressEventArgs args)
+        {
+            /*MessageDialog md = new MessageDialog (null, DialogFlags.Modal, MessageType.Other, ButtonsType.Ok, "entra"+System.Convert.ToString(a.Event.Button)); 
+			md.Run (); 
+			md.Dispose(); */
         }
     }
 }

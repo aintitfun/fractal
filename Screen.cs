@@ -10,7 +10,7 @@ namespace fractal
         private DrawingArea drawingArea;
         private Cairo.Context cr;
         private MainWindow window;
-        IFractal fractal;
+        public IFractal fractal;
 
         public Screen(ref DrawingArea inDrawingArea, ref Cairo.Context inCR, ref IFractal inFractal, MainWindow inWindow)
         {
@@ -56,9 +56,8 @@ namespace fractal
             Point leftUpCornerPoint=GetLeftUpCornerPoint();
             Point rightDownCornerPoint=GetRightDownCornerPoint();
 
-            int i=0;
-            int j=0;
-            foreach (Point point in fractal.Calculate(GetLeftUpCornerPoint(), GetRightDownCornerPoint(),GetStep(leftUpCornerPoint,rightDownCornerPoint)))
+
+            /*foreach (Point point in fractal.Calculate(GetLeftUpCornerPoint(), GetRightDownCornerPoint(),GetStep(leftUpCornerPoint,rightDownCornerPoint)))
             {
                 
                     cr.SetSourceRGB (Math.Sin(point.iteration), Math.Cos(point.iteration), Math.Cos(point.iteration));
@@ -68,18 +67,33 @@ namespace fractal
                
 
 
-            }
+            }*/
 
 
-
-            /*foreach (int iteration in fractal.Calculate(GetLeftUpCornerPoint(), GetRightDownCornerPoint(),GetStep(leftUpCornerPoint,rightDownCornerPoint)))
+            /*
+            foreach (int iteration in fractal.Calculate(GetLeftUpCornerPoint(), GetRightDownCornerPoint(),GetStep(leftUpCornerPoint,rightDownCornerPoint)))
             {
                 //el punto real quyitando el scalefactor+el ancho +el ajuste desde el centrol
                 int psetX=System.Convert.ToInt32(System.Math.Abs(System.Math.Abs(point.x/fractal.ScaleFactor)-(width/2+System.Math.Abs(fractal.Center.x/fractal.ScaleFactor))));
                 int psetY=System.Convert.ToInt32(System.Math.Abs(System.Math.Abs(point.y/fractal.ScaleFactor)-(height/2+System.Math.Abs(fractal.Center.y/fractal.ScaleFactor))));
                 cr.Rectangle(psetX,psetY,psetX+1,psetY+1);
-                cr.Fill();
+                cr.(Fill);
             }*/
+            
+            List<int> listIterationValues=new List<int>();
+            listIterationValues=fractal.Calculate(GetLeftUpCornerPoint(), GetRightDownCornerPoint(),GetStep(leftUpCornerPoint,rightDownCornerPoint));
+            for (int i=0;i<height;i++)
+            {
+                for (int j=0;j<width;j++)
+                {
+                    int iterationValue=listIterationValues[i*width+j];
+                    cr.SetSourceRGB (Math.Sin(iterationValue), Math.Cos(iterationValue), Math.Cos(iterationValue));
+                    cr.Rectangle(j,i,j,i);
+                    cr.Fill();
+
+                }
+
+            }
         }
     }
 }

@@ -10,20 +10,20 @@ namespace fractal
             Center=new Point(-0.02f,-1.3034f);
             ScaleFactor=0.00011f;
         }
-        public override List<Point> Calculate(Point leftUpCorner, Point rightDownCorner, Point step)
+        public override List<int> Calculate(Point leftUpCorner, Point rightDownCorner, Point step)
         {
-            List<Point> listPoint=new List<Point>();
-            int screenX=0;
-            int screenY=0;
+            List<int> listIterationValues=new List<int>();
+/*             int screenX=0;
+            int screenY=0; */
 
             for (double j=leftUpCorner.y;j<rightDownCorner.y;j+=step.y)
             {
-                screenY++;
-                screenX=0;
+                /* screenY++;
+                screenX=0; */
 
                 for (double i=leftUpCorner.x;i<rightDownCorner.x;i+=step.x)
                 {
-                    screenX++;
+                    //screenX++;
 
                     double x=j;
                     double y=i;
@@ -38,27 +38,25 @@ namespace fractal
                         x=x2-y2+j;
                         
 
-                        //if (System.Math.Abs(x)>20 || System.Math.Abs(y)>20)
                         if (x*x+y*y>4)
                         {
-                            listPoint.Add(new Point(screenX,screenY,k));
+                            listIterationValues.Add(k);
                             exits=true;
                             break;
 
                         }
-                        //oldX=x;
-                        //oldY=y;
+
                     }
                     if (exits==false)
                     {
-                        listPoint.Add(new Point(screenX,screenY,230));
+                        listIterationValues.Add(230);
                     }
 
                                         
                 }
                     
             }
-            return listPoint;
+            return listIterationValues;
         }
     }
 }

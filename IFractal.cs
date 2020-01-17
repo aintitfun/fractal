@@ -7,7 +7,7 @@ namespace fractal
         int MaxIterations{get;set;}
         Point Center{get;set;}
         double ScaleFactor{get;set;}
-        public List<Point> Calculate(Point leftUpCorner, Point rightDownCorner, Point step);
+        public List<int> Calculate(Point leftUpCorner, Point rightDownCorner, Point step);
         
 
     }
