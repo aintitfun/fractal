@@ -12,7 +12,7 @@ namespace fractal
         private MainWindow window;
         public IFractal fractal;
 
-        public Screen(ref DrawingArea inDrawingArea, ref Cairo.Context inCR, ref IFractal inFractal, MainWindow inWindow)
+        public Screen(DrawingArea inDrawingArea, Cairo.Context inCR, IFractal inFractal, MainWindow inWindow)
         {
             drawingArea=inDrawingArea;
             cr=inCR;

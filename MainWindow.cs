@@ -49,7 +49,7 @@ namespace fractal
             var allocation = widget.Allocation;
             surface = widget.Window.CreateSimilarSurface (Cairo.Content.Color, allocation.Width, allocation.Height);
             cr.SetSourceSurface (surface, 0, 0);
-            screen = new Screen( ref drawingArea, ref cr, ref fractal, this);
+            screen = new Screen( drawingArea, cr, fractal, this);
             screen.Paint();
             
             //Cairo.Context cr =  args.Cr;
@@ -72,11 +72,26 @@ namespace fractal
             _counter++;
             _label1.Text = "Hello World! This button has been clicked " + _counter + " time(s).";
         }
+
+        private void DrawFractal()
+        {
+            screen = new Screen( drawingArea, cr, fractal, this);
+            screen.Paint();
+        }
         private void OnClick(object sender,ButtonPressEventArgs args)
         {
             /*MessageDialog md = new MessageDialog (null, DialogFlags.Modal, MessageType.Other, ButtonsType.Ok, "entra"+System.Convert.ToString(a.Event.Button)); 
 			md.Run (); 
 			md.Dispose(); */
+            if (args.Event.Button==1)
+            {
+                fractal.ScaleFactor=ScaleFactor/2;
+            }
+            if (args.Event.Button==3)
+            {
+                fractal.ScaleFactor=ScaleFactor*2;
+
+            }
         }
     }
 }
