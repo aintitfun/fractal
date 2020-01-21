@@ -10,7 +10,6 @@ namespace fractal
         [UI] private Label _label1 = null;
         [UI] private Button _button1 = null;
 
-        private int _counter;
         private Screen screen;
         private DrawingArea drawingArea;
         private Cairo.Context cr;
@@ -67,13 +66,7 @@ namespace fractal
             Application.Quit();
         }
 
-        private void Button1_Clicked(object sender, EventArgs a)
-        {
-            _counter++;
-            _label1.Text = "Hello World! This button has been clicked " + _counter + " time(s).";
-        }
-
-        private void DrawFractal()
+        private void DrawFractal(object o, DrawnArgs args)
         {
             screen = new Screen( drawingArea, cr, fractal, this);
             screen.Paint();
@@ -83,13 +76,14 @@ namespace fractal
             /*MessageDialog md = new MessageDialog (null, DialogFlags.Modal, MessageType.Other, ButtonsType.Ok, "entra"+System.Convert.ToString(a.Event.Button)); 
 			md.Run (); 
 			md.Dispose(); */
+            fractal.Center=screen.GetClickFractalPosition(new Point (args.Event.X, args.Event.Y));
             if (args.Event.Button==1)
             {
-                fractal.ScaleFactor=ScaleFactor/2;
+                fractal.ScaleFactor=fractal.ScaleFactor*0.8f;
             }
             if (args.Event.Button==3)
             {
-                fractal.ScaleFactor=ScaleFactor*2;
+                fractal.ScaleFactor=fractal.ScaleFactor*1.2f;
 
             }
         }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace fractal
 {
@@ -6,36 +7,37 @@ namespace fractal
     {
         public Mandlebrot()
         {
-            MaxIterations=255;
-            Center=new Point(-0.02f,-1.3034f);
-            ScaleFactor=0.00011f;
+            MaxIterations=100;
+            Center=new Point(-0.02,-0.3);
+            ScaleFactor=0.004;
         }
-        public override List<int> Calculate(Point leftUpCorner, Point rightDownCorner, Point step)
+        public override List<int> Calculate(Point leftUpCorner, Point pointsToProcess, Point step)
         {
+            Console.WriteLine(ScaleFactor+" " + Center.x+" "+Center.y);
             List<int> listIterationValues=new List<int>();
-/*             int screenX=0;
+/*             int screenX=0;r
             int screenY=0; */
-
-            for (double j=leftUpCorner.y;j<rightDownCorner.y;j+=step.y)
+            double xpos=leftUpCorner.x;
+            double ypos=leftUpCorner.y;
+            for (double i=0;i<pointsToProcess.y;i++)
             {
                 /* screenY++;
                 screenX=0; */
 
-                for (double i=leftUpCorner.x;i<rightDownCorner.x;i+=step.x)
+                for (double j=0;j<pointsToProcess.x;j++)
                 {
-                    //screenX++;
 
-                    double x=j;
-                    double y=i;
-                    double x2=j*j;
-                    double y2=i*i;
+                    double x=xpos;
+                    double y=ypos;
+                    double x2=xpos*xpos;
+                    double y2=ypos*ypos;
                     bool exits=false;
                     for (int k=0;k<MaxIterations;k++)
                     {
                         x2=x*x;
                         y2=y*y;
-                        y=2*x*y+i;
-                        x=x2-y2+j;
+                        y=2*x*y+ypos;
+                        x=x2-y2+xpos;
                         
 
                         if (x*x+y*y>4)
@@ -51,11 +53,12 @@ namespace fractal
                     {
                         listIterationValues.Add(230);
                     }
-
-                                        
+                    xpos+=step.x;
                 }
-                    
+                xpos=leftUpCorner.x;
+                ypos+=step.y;
             }
+            Console.WriteLine("iteraciones" + listIterationValues.Count+ " ");
             return listIterationValues;
         }
     }
