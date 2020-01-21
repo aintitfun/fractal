@@ -86,6 +86,11 @@ namespace fractal
                 fractal.ScaleFactor=fractal.ScaleFactor*1.2f;
 
             }
+            int width;
+            int height;
+            this.GetSize(out width,out height);
+            //this.Resize(width-1,height-1);
+            this.QueueDraw();
         }
     }
 }
