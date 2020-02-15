@@ -9,7 +9,5 @@ namespace fractal
         double ScaleFactor{get;set;}
         public List<int> 
         Calculate(Point leftUpCorner, Point pointsToProcess, Point step);
-        
-
     }
 }

@@ -15,15 +15,10 @@ namespace fractal
         {
             Console.WriteLine(ScaleFactor+" " + Center.x+" "+Center.y);
             List<int> listIterationValues=new List<int>();
-/*             int screenX=0;r
-            int screenY=0; */
             double xpos=leftUpCorner.x;
             double ypos=leftUpCorner.y;
             for (double i=0;i<pointsToProcess.y;i++)
             {
-                /* screenY++;
-                screenX=0; */
-
                 for (double j=0;j<pointsToProcess.x;j++)
                 {
 
@@ -38,21 +33,16 @@ namespace fractal
                         y2=y*y;
                         y=2*x*y+ypos;
                         x=x2-y2+xpos;
-                        
-
                         if (x*x+y*y>4)
                         {
                             listIterationValues.Add(k);
                             exits=true;
                             break;
-
                         }
-
                     }
                     if (exits==false)
-                    {
                         listIterationValues.Add(230);
-                    }
+
                     xpos+=step.x;
                 }
                 xpos=leftUpCorner.x;

@@ -42,9 +42,7 @@
             <property name="label_xalign">0</property>
             <property name="shadow_type">none</property>
             <signal name="button-press-event" handler="FramePictureOnClick" swapped="no"/>
-            <signal name="configure-event" handler="FrameConfigure" swapped="no"/>
             <signal name="draw" handler="FrameDrawn" swapped="no"/>
-            <signal name="motion-notify-event" handler="FrameMotionNotify" swapped="no"/>
             <child>
               <object class="GtkAlignment">
                 <property name="visible">True</property>
@@ -60,7 +58,6 @@
               <object class="GtkLabel">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">__glade_unnamed_2</property>
               </object>
             </child>
           </object>

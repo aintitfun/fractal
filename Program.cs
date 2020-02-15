@@ -20,10 +20,6 @@ namespace fractal
 
             win.Show();
             Application.Run();
-
-
-
-            
             
         }
     }

@@ -21,19 +21,9 @@ namespace fractal
             window=inWindow;
             width=window.AllocatedWidth;
             height=window.AllocatedHeight;
-
-        }
-        public void Pset (int x, int y)
-        {
-            //DrawingArea darea = new DrawingArea();
-
-            
-            //cr.LineTo(100,100);
-
         }
         public Point GetLeftUpCornerPoint()
         {
-
             return new Point(fractal.Center.x-(width/2)*fractal.ScaleFactor,fractal.Center.y-(height/2)*fractal.ScaleFactor);
         }
 
@@ -45,7 +35,6 @@ namespace fractal
 
         public Point GetRightDownCornerPoint()
         {
-
             return new Point(fractal.Center.x+(width/2)*fractal.ScaleFactor,fractal.Center.y+(height/2)*fractal.ScaleFactor);
         }
         public Point GetStep(Point inLeftUpCornerPoint,Point inRightDownCornerPoint)
@@ -60,32 +49,7 @@ namespace fractal
 
             Point leftUpCornerPoint=GetLeftUpCornerPoint();
             Point rightDownCornerPoint=GetRightDownCornerPoint();
-
             Console.WriteLine("corners: "+leftUpCornerPoint.x+" "+leftUpCornerPoint.y+" "+rightDownCornerPoint.x+" "+rightDownCornerPoint.y);
-
-            /*foreach (Point point in fractal.Calculate(GetLeftUpCornerPoint(), GetRightDownCornerPoint(),GetStep(leftUpCornerPoint,rightDownCornerPoint)))
-            {
-                
-                    cr.SetSourceRGB (Math.Sin(point.iteration), Math.Cos(point.iteration), Math.Cos(point.iteration));
-                    cr.Rectangle(System.Convert.ToDouble(point.x),System.Convert.ToDouble(point.y),System.Convert.ToDouble(point.x),System.Convert.ToDouble(point.y));
-                    cr.Fill(); 
-
-               
-
-
-            }*/
-
-
-            /*
-            foreach (int iteration in fractal.Calculate(GetLeftUpCornerPoint(), GetRightDownCornerPoint(),GetStep(leftUpCornerPoint,rightDownCornerPoint)))
-            {
-                //el punto real quyitando el scalefactor+el ancho +el ajuste desde el centrol
-                int psetX=System.Convert.ToInt32(System.Math.Abs(System.Math.Abs(point.x/fractal.ScaleFactor)-(width/2+System.Math.Abs(fractal.Center.x/fractal.ScaleFactor))));
-                int psetY=System.Convert.ToInt32(System.Math.Abs(System.Math.Abs(point.y/fractal.ScaleFactor)-(height/2+System.Math.Abs(fractal.Center.y/fractal.ScaleFactor))));
-                cr.Rectangle(psetX,psetY,psetX+1,psetY+1);
-                cr.(Fill);
-            }*/
-            
             List<int> listIterationValues=new List<int>();
             listIterationValues=fractal.Calculate(GetLeftUpCornerPoint(), new Point(width,height),GetStep(leftUpCornerPoint,rightDownCornerPoint));
             for (int i=0;i<height;i++)
