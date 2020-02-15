@@ -9,17 +9,19 @@ namespace fractal
     {
         private DrawingArea drawingArea;
         private Cairo.Context cr;
-        private MainWindow window;
+        private Gtk.Frame window;
         public IFractal fractal;
         private int width;
         private int height;
-        public Screen(DrawingArea inDrawingArea, Cairo.Context inCR, IFractal inFractal, MainWindow inWindow)
+        public Screen(DrawingArea inDrawingArea, Cairo.Context inCR, IFractal inFractal, Gtk.Frame inWindow)
         {
             drawingArea=inDrawingArea;
             cr=inCR;
             fractal=inFractal;
             window=inWindow;
-            window.GetSize(out width,out height);
+            width=window.AllocatedWidth;
+            height=window.AllocatedHeight;
+
         }
         public void Pset (int x, int y)
         {
