@@ -7,15 +7,13 @@ namespace fractal
 {
     public class Screen
     {
-        private DrawingArea drawingArea;
         private Cairo.Context cr;
         private Gtk.Frame window;
         public IFractal fractal;
         private int width;
         private int height;
-        public Screen(DrawingArea inDrawingArea, Cairo.Context inCR, IFractal inFractal, Gtk.Frame inWindow)
+        public Screen( Cairo.Context inCR, IFractal inFractal, Gtk.Frame inWindow)
         {
-            drawingArea=inDrawingArea;
             cr=inCR;
             fractal=inFractal;
             window=inWindow;
@@ -58,7 +56,8 @@ namespace fractal
                 {
                     int iterationValue=listIterationValues[i*width+j];
                     cr.SetSourceRGB (Math.Sin(iterationValue), Math.Cos(iterationValue), Math.Cos(iterationValue));
-                    cr.Rectangle(j,i,j,i);
+                    //cr.SetSourceRGB (1, 1, 1);
+                    cr.Rectangle(j,i,1,1);
                     cr.Fill();
 
                 }

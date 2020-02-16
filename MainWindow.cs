@@ -10,8 +10,8 @@ namespace fractal
         [UI] private Label _label1 = null;
         [UI] private Button RefreshButton = null;
         [UI] private Frame PictureFrame = null;
+        [UI] private Alignment PictureAlligment=null;
         private Screen screen;
-        private DrawingArea drawingArea;
         private Cairo.Context cr;
         private Cairo.Surface surface = null;
         private IFractal fractal;
@@ -23,9 +23,6 @@ namespace fractal
         {
             builder.Autoconnect(this);
             DeleteEvent += Window_DeleteEvent;   
-            DrawingArea da = new DrawingArea ();
-            da.SetSizeRequest (500,300);
-            PictureFrame.Add (da);
             fractal=new Mandlebrot();
         }
 
@@ -33,11 +30,7 @@ namespace fractal
         {
             refreshClicked=true;
         }
-        private void OnDraw (object o, DrawnArgs args)  
-        {
-        }
-
-      private void FrameDrawn (object o, DrawnArgs args)
+        private void FrameDrawn (object o, DrawnArgs args)
         {
             if (refreshClicked)
             {
@@ -45,54 +38,40 @@ namespace fractal
                 Cairo.Context Cr = args.Cr;
                 cr=Cr;	      	
                 Gdk.Rectangle alloc = widget.Allocation;
-                screen = new Screen( drawingArea, cr, fractal, PictureFrame);
+                screen = new Screen(cr, fractal, PictureFrame);
                 screen.Paint();
                 refreshClicked=false;
+                cr.Dispose();
             }
         }
-
         private void Window_DeleteEvent(object sender, DeleteEventArgs a)
         {
             Application.Quit();
         }
 
         private void OnClick(object sender,ButtonPressEventArgs args){
-            Console.WriteLine(args.Event.X);
-            Console.WriteLine(args.Event.Y);
-            fractal.Center=screen.GetClickFractalPosition(new Point (args.Event.X, args.Event.Y));
-            if (args.Event.Button==1)
-            {
-                fractal.ScaleFactor=fractal.ScaleFactor*0.8f;
+            int pictureFrameXPosition=PictureAlligment.Allocation.X;
+            int pictureFrameYPosition=PictureAlligment.Allocation.Y;
+            if (args.Event.X>pictureFrameXPosition && args.Event.Y>pictureFrameYPosition && args.Event.Button!=2)
+            {           
+                fractal.Center=screen.GetClickFractalPosition(new Point (args.Event.X-pictureFrameXPosition, args.Event.Y-pictureFrameYPosition));
+                if (args.Event.Button==1)
+                    fractal.ScaleFactor=fractal.ScaleFactor*0.8f;
+                if (args.Event.Button==3)
+                    fractal.ScaleFactor=fractal.ScaleFactor*1.2f;
+                int width;
+                int height;
+                this.GetSize(out width,out height);
+                //this.Resize(width-1,height-1);
+                refreshClicked=true;
+                PictureFrame.QueueDraw();
             }
-            if (args.Event.Button==3)
+            if (args.Event.Button==2)
             {
-                fractal.ScaleFactor=fractal.ScaleFactor*1.2f;
+                Console.WriteLine("click position: "+args.Event.X+" pictureframe position: " + pictureFrameXPosition);
+                Console.WriteLine("click position: "+args.Event.Y+" pictureframe position: " + pictureFrameYPosition);
             }
-            int width;
-            int height;
-            this.GetSize(out width,out height);
-            //this.Resize(width-1,height-1);
-            refreshClicked=true;
-            PictureFrame.QueueDraw();
-        }
-        
-        private void FramePictureOnClick(object sender,ButtonPressEventArgs args)
-        {
-            fractal.Center=screen.GetClickFractalPosition(new Point (args.Event.X, args.Event.Y));
-            if (args.Event.Button==1)
-            {
-                fractal.ScaleFactor=fractal.ScaleFactor*0.8f;
-            }
-            if (args.Event.Button==3)
-            {
-                fractal.ScaleFactor=fractal.ScaleFactor*1.2f;
 
-            }
-            int width;
-            int height;
-            this.GetSize(out width,out height);
-            //this.Resize(width-1,height-1);
-            this.QueueDraw();
         }
     }
 }
