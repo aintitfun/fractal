@@ -8,89 +8,89 @@
     ".NETCoreApp,Version=v3.0": {
       "fractal/1.0.0": {
         "dependencies": {
-          "GtkSharp": "3.22.25.56"
+          "GtkSharp": "3.22.25.128"
         },
         "runtime": {
           "fractal.dll": {}
         }
       },
-      "AtkSharp/3.22.25.56": {
+      "AtkSharp/3.22.25.128": {
         "dependencies": {
-          "GLibSharp": "3.22.25.56"
+          "GLibSharp": "3.22.25.128"
         },
         "runtime": {
           "lib/netstandard2.0/AtkSharp.dll": {
-            "assemblyVersion": "3.22.25.56",
-            "fileVersion": "3.22.25.56"
+            "assemblyVersion": "3.22.25.128",
+            "fileVersion": "3.22.25.128"
           }
         }
       },
-      "CairoSharp/3.22.25.56": {
+      "CairoSharp/3.22.25.128": {
         "runtime": {
           "lib/netstandard2.0/CairoSharp.dll": {
-            "assemblyVersion": "3.22.25.56",
-            "fileVersion": "3.22.25.56"
+            "assemblyVersion": "3.22.25.128",
+            "fileVersion": "3.22.25.128"
           }
         }
       },
-      "GdkSharp/3.22.25.56": {
+      "GdkSharp/3.22.25.128": {
         "dependencies": {
-          "CairoSharp": "3.22.25.56",
-          "GLibSharp": "3.22.25.56",
-          "GioSharp": "3.22.25.56",
-          "PangoSharp": "3.22.25.56"
+          "CairoSharp": "3.22.25.128",
+          "GLibSharp": "3.22.25.128",
+          "GioSharp": "3.22.25.128",
+          "PangoSharp": "3.22.25.128"
         },
         "runtime": {
           "lib/netstandard2.0/GdkSharp.dll": {
-            "assemblyVersion": "3.22.25.56",
-            "fileVersion": "3.22.25.56"
+            "assemblyVersion": "3.22.25.128",
+            "fileVersion": "3.22.25.128"
           }
         }
       },
-      "GioSharp/3.22.25.56": {
+      "GioSharp/3.22.25.128": {
         "dependencies": {
-          "GLibSharp": "3.22.25.56"
+          "GLibSharp": "3.22.25.128"
         },
         "runtime": {
           "lib/netstandard2.0/GioSharp.dll": {
-            "assemblyVersion": "3.22.25.56",
-            "fileVersion": "3.22.25.56"
+            "assemblyVersion": "3.22.25.128",
+            "fileVersion": "3.22.25.128"
           }
         }
       },
-      "GLibSharp/3.22.25.56": {
+      "GLibSharp/3.22.25.128": {
         "runtime": {
           "lib/netstandard2.0/GLibSharp.dll": {
-            "assemblyVersion": "3.22.25.56",
-            "fileVersion": "3.22.25.56"
+            "assemblyVersion": "3.22.25.128",
+            "fileVersion": "3.22.25.128"
           }
         }
       },
-      "GtkSharp/3.22.25.56": {
+      "GtkSharp/3.22.25.128": {
         "dependencies": {
-          "AtkSharp": "3.22.25.56",
-          "CairoSharp": "3.22.25.56",
-          "GLibSharp": "3.22.25.56",
-          "GdkSharp": "3.22.25.56",
-          "GioSharp": "3.22.25.56",
-          "PangoSharp": "3.22.25.56"
+          "AtkSharp": "3.22.25.128",
+          "CairoSharp": "3.22.25.128",
+          "GLibSharp": "3.22.25.128",
+          "GdkSharp": "3.22.25.128",
+          "GioSharp": "3.22.25.128",
+          "PangoSharp": "3.22.25.128"
         },
         "runtime": {
           "lib/netstandard2.0/GtkSharp.dll": {
-            "assemblyVersion": "3.22.25.56",
-            "fileVersion": "3.22.25.56"
+            "assemblyVersion": "3.22.25.128",
+            "fileVersion": "3.22.25.128"
           }
         }
       },
-      "PangoSharp/3.22.25.56": {
+      "PangoSharp/3.22.25.128": {
         "dependencies": {
-          "CairoSharp": "3.22.25.56",
-          "GLibSharp": "3.22.25.56"
+          "CairoSharp": "3.22.25.128",
+          "GLibSharp": "3.22.25.128"
         },
         "runtime": {
           "lib/netstandard2.0/PangoSharp.dll": {
-            "assemblyVersion": "3.22.25.56",
-            "fileVersion": "3.22.25.56"
+            "assemblyVersion": "3.22.25.128",
+            "fileVersion": "3.22.25.128"
           }
         }
       }
@@ -102,54 +102,54 @@
       "serviceable": false,
       "sha512": ""
     },
-    "AtkSharp/3.22.25.56": {
+    "AtkSharp/3.22.25.128": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BMHkj17PorUpJTAoDpb3m2BRqUwgcRCa1ln83osSZ7X5fkxwx+gAr6OizRhP8n2NjE+l1NqXT1ma+1vaCYr7QQ==",
-      "path": "atksharp/3.22.25.56",
-      "hashPath": "atksharp.3.22.25.56.nupkg.sha512"
+      "sha512": "sha512-3O7BNm+JbFz9BffwOE1cM6/86wYyZIvjQe2doNJIlVXX/tdSU92dwNHhAI+sa7MGCvXJe0QvsKN7AHCu6b+4AA==",
+      "path": "atksharp/3.22.25.128",
+      "hashPath": "atksharp.3.22.25.128.nupkg.sha512"
     },
-    "CairoSharp/3.22.25.56": {
+    "CairoSharp/3.22.25.128": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-DazuLty96Cf/QK3Ma2AgNHUVDnDvQyWfGnItUfhRwKpKEHKEnLQFx3Dme93nhGMKWF1llzUBGxn4NfUa2+h6Gw==",
-      "path": "cairosharp/3.22.25.56",
-      "hashPath": "cairosharp.3.22.25.56.nupkg.sha512"
+      "sha512": "sha512-Y6J3Dp6FVvcdICHXsR97OfiE8GjsiC2FgIpJyGCMGg74JqqWh8BZwPmS+CjksFTDQkuhwFjJqeXvbeOdx5GL1Q==",
+      "path": "cairosharp/3.22.25.128",
+      "hashPath": "cairosharp.3.22.25.128.nupkg.sha512"
     },
-    "GdkSharp/3.22.25.56": {
+    "GdkSharp/3.22.25.128": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-xpciEunH3s2q9yP165Ci8Rq8+bHlblgtMTB5fbdoaOcd9tz1+06Xa48Yquu+WH7PUL/tq0CkJ8mmva0dJYojGw==",
-      "path": "gdksharp/3.22.25.56",
-      "hashPath": "gdksharp.3.22.25.56.nupkg.sha512"
+      "sha512": "sha512-2PKpfl4z4ZakhVXMY3Cg+ulFhaxA1a2QvzIrFWOVxB1ympgjRBnXe4jLy131dicHwn6EDuNORihlJ/VukiyxoQ==",
+      "path": "gdksharp/3.22.25.128",
+      "hashPath": "gdksharp.3.22.25.128.nupkg.sha512"
     },
-    "GioSharp/3.22.25.56": {
+    "GioSharp/3.22.25.128": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-EcED8KN3ltTgfLoOCPc7T/nL2Ow5kGCYL2OGQM4zL7/tjAwCV9gUoPO3AFjqKAns0VekP2g9lODPcWn6gWdsgA==",
-      "path": "giosharp/3.22.25.56",
-      "hashPath": "giosharp.3.22.25.56.nupkg.sha512"
+      "sha512": "sha512-mPKl15WEONpvM52aIwLrSOL3Co3AEfbaiHz4hcEWVQNthxoL/9K9YOlPMLYzKy8+X4HiwDJAjhwpHd1IoBVE7A==",
+      "path": "giosharp/3.22.25.128",
+      "hashPath": "giosharp.3.22.25.128.nupkg.sha512"
     },
-    "GLibSharp/3.22.25.56": {
+    "GLibSharp/3.22.25.128": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-MgrEMJkTWC98CUanOk0NgOjNY86ZxwhQEecrXnvpcvuz5TkL2E4d5GqFCLtx0qiaHxiiQXB4/1WLkE9uzSEyYg==",
-      "path": "glibsharp/3.22.25.56",
-      "hashPath": "glibsharp.3.22.25.56.nupkg.sha512"
+      "sha512": "sha512-WjEF7d/Bltk9rntiV1P3ohhAGyZrcQ1JWgJQ2dDjceC8Y4fBPPrY7NaHUzntNHJTu2vJeVqdvae8ufhdM34xQQ==",
+      "path": "glibsharp/3.22.25.128",
+      "hashPath": "glibsharp.3.22.25.128.nupkg.sha512"
     },
-    "GtkSharp/3.22.25.56": {
+    "GtkSharp/3.22.25.128": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ng9f51otsEvq+Era1VslIsQ+4mI4ifb/waKzzQKGwcDEDq4sJz1boDqY0s6VSqWFdJuERRIbx8sR7n3wZFqwdA==",
-      "path": "gtksharp/3.22.25.56",
-      "hashPath": "gtksharp.3.22.25.56.nupkg.sha512"
+      "sha512": "sha512-pdQgKKv8IzMYW3dVTQx1yCRcnq2dSHnnfLVwFvtkEHdobmgGb7sVeC4ghPBmPOfAjYgD2vTEb6yyZAWgSyLrzQ==",
+      "path": "gtksharp/3.22.25.128",
+      "hashPath": "gtksharp.3.22.25.128.nupkg.sha512"
     },
-    "PangoSharp/3.22.25.56": {
+    "PangoSharp/3.22.25.128": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-/Ydjmfb8CatDzmL05h0Rfw5uq5uyY2QhAahi0/Em3NYK+WkfzSVI3fpn98jCSmy/mJzYeR0XRoNaE/nxNVzXrw==",
-      "path": "pangosharp/3.22.25.56",
-      "hashPath": "pangosharp.3.22.25.56.nupkg.sha512"
+      "sha512": "sha512-j3dm93MzUFJhCp0ecaxzDc+JZ8OAIwGeERp8GKVCNLxbdxDi68VYFI5iSZPNca091cO5Zo5IT5eeaWoyIwXR9g==",
+      "path": "pangosharp/3.22.25.128",
+      "hashPath": "pangosharp.3.22.25.128.nupkg.sha512"
     }
   }
 }

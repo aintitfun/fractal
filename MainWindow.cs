@@ -32,8 +32,8 @@ namespace fractal
         }
         private void FrameDrawn (object o, DrawnArgs args)
         {
-            if (refreshClicked)
-            {
+            /*if (refreshClicked)
+            {*/
                 Widget widget = o as Widget;
                 Cairo.Context Cr = args.Cr;
                 cr=Cr;	      	
@@ -42,7 +42,7 @@ namespace fractal
                 screen.Paint();
                 refreshClicked=false;
                 cr.Dispose();
-            }
+            /*}*/
         }
         private void Window_DeleteEvent(object sender, DeleteEventArgs a)
         {
@@ -50,11 +50,15 @@ namespace fractal
         }
 
         private void OnClick(object sender,ButtonPressEventArgs args){
+
+
+            
             int pictureFrameXPosition=PictureAlligment.Allocation.X;
             int pictureFrameYPosition=PictureAlligment.Allocation.Y;
             if (args.Event.X>pictureFrameXPosition && args.Event.Y>pictureFrameYPosition && args.Event.Button!=2)
-            {           
-                fractal.Center=screen.GetClickFractalPosition(new Point (args.Event.X-pictureFrameXPosition, args.Event.Y-pictureFrameYPosition));
+            {   
+                Point center=new Point(args.Event.X-pictureFrameXPosition, args.Event.Y-pictureFrameYPosition);
+                fractal.Center=screen.GetClickFractalPosition(center);
                 if (args.Event.Button==1)
                     fractal.ScaleFactor=fractal.ScaleFactor*0.8f;
                 if (args.Event.Button==3)

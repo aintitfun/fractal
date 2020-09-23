@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/papa/fractal/fractal.csproj": {}
+    "/home/papa/fuentes/fractal/fractal.csproj": {}
   },
   "projects": {
-    "/home/papa/fractal/fractal.csproj": {
+    "/home/papa/fuentes/fractal/fractal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/papa/fractal/fractal.csproj",
+        "projectUniqueName": "/home/papa/fuentes/fractal/fractal.csproj",
         "projectName": "fractal",
-        "projectPath": "/home/papa/fractal/fractal.csproj",
+        "projectPath": "/home/papa/fuentes/fractal/fractal.csproj",
         "packagesPath": "/home/papa/.nuget/packages/",
-        "outputPath": "/home/papa/fractal/obj/",
+        "outputPath": "/home/papa/fuentes/fractal/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/papa/.nuget/NuGet/NuGet.Config"
@@ -58,7 +58,7 @@
             },
             {
               "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[3.0.2, 3.0.2]"
+              "version": "[3.0.3, 3.0.3]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
@@ -70,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
         }
       }
     }
