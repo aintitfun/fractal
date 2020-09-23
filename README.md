@@ -1,2 +1,4 @@
 # fractal
-simple fractal renderer
+simple fractal renderer on .net.
+
+As this is done on vscode on linux it uses GTKSharp ( + glade for form & event design)
