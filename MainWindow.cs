@@ -16,7 +16,7 @@ namespace fractal
         private Cairo.Surface surface = null;
         private IFractal fractal;
 
-        private bool refreshClicked =false;
+        //private bool refreshClicked =false;
         public MainWindow() : this(new Builder("MainWindow.glade")) { }
 
         private MainWindow(Builder builder) : base(builder.GetObject("MainWindow").Handle)
@@ -28,7 +28,7 @@ namespace fractal
 
         private void OnRefreshButtonClick(object sender, EventArgs args)
         {
-            refreshClicked=true;
+            //refreshClicked=true;
         }
         private void FrameDrawn (object o, DrawnArgs args)
         {
@@ -40,7 +40,7 @@ namespace fractal
                 Gdk.Rectangle alloc = widget.Allocation;
                 screen = new Screen(cr, fractal, PictureFrame);
                 screen.Paint();
-                refreshClicked=false;
+                //refreshClicked=false;
                 cr.Dispose();
             /*}*/
         }
@@ -67,7 +67,7 @@ namespace fractal
                 int height;
                 this.GetSize(out width,out height);
                 //this.Resize(width-1,height-1);
-                refreshClicked=true;
+                //refreshClicked=true;
                 PictureFrame.QueueDraw();
             }
             if (args.Event.Button==2)
