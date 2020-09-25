@@ -1,35 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.1 -->
+<!-- Generated with glade 3.36.0 -->
 <interface>
   <requires lib="gtk+" version="3.18"/>
   <object class="GtkWindow" id="MainWindow">
+    <property name="sensitive">False</property>
     <property name="can_focus">False</property>
     <property name="default_width">1000</property>
     <property name="default_height">600</property>
-    <signal name="button-press-event" handler="OnClick" swapped="no"/>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
+    <signal name="button-press-event" handler="WindowOnClick" swapped="no"/>
     <child>
       <object class="GtkFixed">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <child>
-          <object class="GtkButton" id="RefreshButton">
-            <property name="label" translatable="yes">Refresh</property>
-            <property name="name">RefreshButton</property>
-            <property name="width_request">100</property>
-            <property name="height_request">-1</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="receives_default">True</property>
-            <signal name="clicked" handler="OnRefreshButtonClick" swapped="no"/>
-          </object>
-          <packing>
-            <property name="x">7</property>
-            <property name="y">595</property>
-          </packing>
-        </child>
         <child>
           <object class="GtkFrame" id="PictureFrame">
             <property name="name">PictureFrame</property>
@@ -64,6 +46,9 @@
           </packing>
         </child>
       </object>
+    </child>
+    <child type="titlebar">
+      <placeholder/>
     </child>
   </object>
 </interface>

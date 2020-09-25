@@ -49,7 +49,7 @@ namespace fractal
             Application.Quit();
         }
 
-        private void OnClick(object sender,ButtonPressEventArgs args){
+        private void WindowOnClick(object sender,ButtonPressEventArgs args){
 
 
             
