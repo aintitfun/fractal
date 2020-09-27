@@ -10,6 +10,49 @@ namespace fractal
             MaxIterations=100;
             Center=new Point(-0.02,-0.3);
             ScaleFactor=0.004;
+            listIterationValues = new List<int>();
+
+
+        }
+        public override void Calculate(Point leftUpCorner, Point pointsToProcess, Point step, int line)
+        {
+            List<int> listLineIterations=new List<int>();
+            double xpos = leftUpCorner.x;
+            double ypos = leftUpCorner.y*line;
+            /*for (double i = 0; i < pointsToProcess.y; i++)
+            {*/
+                for (double j = 0; j < pointsToProcess.x; j++)
+                {
+
+                    double x = xpos;
+                    double y = ypos;
+                    double x2 = xpos * xpos;
+                    double y2 = ypos * ypos;
+                    bool exits = false;
+                    for (int k = 0; k < MaxIterations; k++)
+                    {
+                        x2 = x * x;
+                        y2 = y * y;
+                        y = 2 * x * y + ypos;
+                        x = x2 - y2 + xpos;
+                        if (x * x + y * y > 4)
+                        {
+                            listLineIterations.Add(k);
+                            exits = true;
+                            break;
+                        }
+                    }
+                    if (exits == false)
+                    listLineIterations.Add(230);
+
+                    xpos += step.x;
+                }
+                //xpos = leftUpCorner.x;
+                //ypos += step.y;
+            /*}*/
+            /*Console.WriteLine("iteraciones" + listIterationValues.Count + " ");
+            return listIterationValues;*/
+            listIterationValues.InsertRange((int)pointsToProcess.x*line,listLineIterations);
         }
         public override List<int> Calculate(Point leftUpCorner, Point pointsToProcess, Point step)
         {

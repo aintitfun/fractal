@@ -1,19 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "39xEUDz+AszszwD3/1dz3DGfCVRf0unWKqbHq5RPTiFR3z1zBd5izc1bUGt/SuxtTCv50EJIdi2eEU2s25D9YQ==",
+  "dgSpecHash": "OnWsdaWbLZg4TrxLiZ9rmRjqELnendGo2f1I7WzSbh2EYKTwL9yyA26HjMT7NOLlPCiwrju9JHwv75xXiEkudA==",
   "success": true,
-  "projectFilePath": "/home/papa/fuentes/fractal/fractal.csproj",
+  "projectFilePath": "F:\\Users\\papa\\Documents\\fractal\\fractal.csproj",
   "expectedPackageFiles": [
-    "/home/papa/.nuget/packages/atksharp/3.22.25.128/atksharp.3.22.25.128.nupkg.sha512",
-    "/home/papa/.nuget/packages/cairosharp/3.22.25.128/cairosharp.3.22.25.128.nupkg.sha512",
-    "/home/papa/.nuget/packages/gdksharp/3.22.25.128/gdksharp.3.22.25.128.nupkg.sha512",
-    "/home/papa/.nuget/packages/giosharp/3.22.25.128/giosharp.3.22.25.128.nupkg.sha512",
-    "/home/papa/.nuget/packages/glibsharp/3.22.25.128/glibsharp.3.22.25.128.nupkg.sha512",
-    "/home/papa/.nuget/packages/gtksharp/3.22.25.128/gtksharp.3.22.25.128.nupkg.sha512",
-    "/home/papa/.nuget/packages/pangosharp/3.22.25.128/pangosharp.3.22.25.128.nupkg.sha512",
-    "/home/papa/.nuget/packages/microsoft.netcore.app.ref/3.0.0/microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
-    "/home/papa/.nuget/packages/microsoft.aspnetcore.app.ref/3.0.1/microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
-    "/home/papa/.nuget/packages/microsoft.netcore.app.host.linux-x64/3.0.3/microsoft.netcore.app.host.linux-x64.3.0.3.nupkg.sha512"
+    "C:\\Users\\papa\\.nuget\\packages\\atksharp\\3.22.25.128\\atksharp.3.22.25.128.nupkg.sha512",
+    "C:\\Users\\papa\\.nuget\\packages\\cairosharp\\3.22.25.128\\cairosharp.3.22.25.128.nupkg.sha512",
+    "C:\\Users\\papa\\.nuget\\packages\\gdksharp\\3.22.25.128\\gdksharp.3.22.25.128.nupkg.sha512",
+    "C:\\Users\\papa\\.nuget\\packages\\giosharp\\3.22.25.128\\giosharp.3.22.25.128.nupkg.sha512",
+    "C:\\Users\\papa\\.nuget\\packages\\glibsharp\\3.22.25.128\\glibsharp.3.22.25.128.nupkg.sha512",
+    "C:\\Users\\papa\\.nuget\\packages\\gtksharp\\3.22.25.128\\gtksharp.3.22.25.128.nupkg.sha512",
+    "C:\\Users\\papa\\.nuget\\packages\\pangosharp\\3.22.25.128\\pangosharp.3.22.25.128.nupkg.sha512",
+    "C:\\Users\\papa\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.0.1\\microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "C:\\Users\\papa\\.nuget\\packages\\microsoft.netcore.app.ref\\3.0.0\\microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "C:\\Users\\papa\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.0.3\\microsoft.netcore.app.host.win-x64.3.0.3.nupkg.sha512",
+    "C:\\Users\\papa\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.0.0\\microsoft.windowsdesktop.app.ref.3.0.0.nupkg.sha512"
   ],
   "logs": []
 }

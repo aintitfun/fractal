@@ -48,13 +48,16 @@ namespace fractal
             Point leftUpCornerPoint=GetLeftUpCornerPoint();
             Point rightDownCornerPoint=GetRightDownCornerPoint();
             Console.WriteLine("corners: "+leftUpCornerPoint.x+" "+leftUpCornerPoint.y+" "+rightDownCornerPoint.x+" "+rightDownCornerPoint.y);
-            List<int> listIterationValues=new List<int>();
-            listIterationValues=fractal.Calculate(GetLeftUpCornerPoint(), new Point(width,height),GetStep(leftUpCornerPoint,rightDownCornerPoint));
+            for (int i = 0; i < height; i++)
+            {
+                fractal.Calculate(GetLeftUpCornerPoint(), new Point(width, height), GetStep(leftUpCornerPoint, rightDownCornerPoint),i);
+            }
+                
             for (int i=0;i<height;i++)
             {
                 for (int j=0;j<width;j++)
                 {
-                    int iterationValue=listIterationValues[i*width+j];
+                    int iterationValue=fractal.listIterationValues[i*width+j];
                     cr.SetSourceRGB (Math.Sin(iterationValue), Math.Cos(iterationValue), Math.Cos(iterationValue));
                     //cr.SetSourceRGB (1, 1, 1);
                     cr.Rectangle(j,i,1,1);
