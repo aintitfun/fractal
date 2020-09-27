@@ -5,18 +5,17 @@ namespace fractal
 {
     public class Mandlebrot : Fractal
     {
-        public Mandlebrot()
+        public Mandlebrot(Point pointsToProcess)
         {
             MaxIterations=100;
             Center=new Point(-0.02,-0.3);
             ScaleFactor=0.004;
-            listIterationValues = new List<int>();
-
+            listIterationValues=new int[(int)pointsToProcess.x*(int)pointsToProcess.y];   
 
         }
-        public override void Calculate(Point leftUpCorner, Point pointsToProcess, Point step, int line)
+        public override void Calculate(Point leftUpCorner,Point pointsToProcess, Point step, int line)
         {
-            List<int> listLineIterations=new List<int>();
+            int [] listLineIterations=new int[(int)pointsToProcess.y];
             double xpos = leftUpCorner.x;
             double ypos = leftUpCorner.y+(line*step.y);
             /*for (double i = 0; i < pointsToProcess.y; i++)
@@ -37,13 +36,13 @@ namespace fractal
                         x = x2 - y2 + xpos;
                         if (x * x + y * y > 4)
                         {
-                            listLineIterations.Add(k);
+                            listIterationValues[line*(int)pointsToProcess.x+(int)j]=k;
                             exits = true;
                             break;
                         }
                     }
                     if (exits == false)
-                    listLineIterations.Add(230);
+                        listIterationValues[line*(int)pointsToProcess.x+(int)j]=230;
 
                     xpos += step.x;
                 }
@@ -52,7 +51,7 @@ namespace fractal
             /*}*/
             /*Console.WriteLine("iteraciones" + listIterationValues.Count + " ");
             return listIterationValues;*/
-            listIterationValues.InsertRange((int)pointsToProcess.x*line,listLineIterations);
+            //listIterationValues[(int)pointsToProcess.x*line]=listLineIterations;
         }
         public override List<int> Calculate(Point leftUpCorner, Point pointsToProcess, Point step)
         {

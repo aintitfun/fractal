@@ -23,7 +23,6 @@ namespace fractal
         {
             builder.Autoconnect(this);
             DeleteEvent += Window_DeleteEvent;   
-            fractal=new Mandlebrot();
         }
 
         private void OnRefreshButtonClick(object sender, EventArgs args)
@@ -34,6 +33,8 @@ namespace fractal
         {
             /*if (refreshClicked)
             {*/
+                if (fractal == null)
+                    fractal=new Mandlebrot(new Point(PictureFrame.Window.Width, PictureFrame.Window.Height));
                 Widget widget = o as Widget;
                 Cairo.Context Cr = args.Cr;
                 cr=Cr;	      	

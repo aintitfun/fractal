@@ -2,6 +2,7 @@ using Gtk;
 using Cairo;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace fractal
 {
@@ -48,10 +49,15 @@ namespace fractal
             Point leftUpCornerPoint=GetLeftUpCornerPoint();
             Point rightDownCornerPoint=GetRightDownCornerPoint();
             Console.WriteLine("corners: "+leftUpCornerPoint.x+" "+leftUpCornerPoint.y+" "+rightDownCornerPoint.x+" "+rightDownCornerPoint.y);
-            for (int i = 0; i < height; i++)
+            Parallel.For(0,height,new ParallelOptions{ MaxDegreeOfParallelism = Environment.ProcessorCount },i => 
+                {
+                    fractal.Calculate(GetLeftUpCornerPoint(), new Point(width, height), GetStep(leftUpCornerPoint, rightDownCornerPoint),i);
+                });
+
+            /*for (int i = 0; i < height; i+=3)
             {
                 fractal.Calculate(GetLeftUpCornerPoint(), new Point(width, height), GetStep(leftUpCornerPoint, rightDownCornerPoint),i);
-            }
+            }*/
                 
             for (int i=0;i<height;i++)
             {
