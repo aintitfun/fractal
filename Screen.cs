@@ -51,7 +51,7 @@ namespace fractal
             Console.WriteLine("corners: "+leftUpCornerPoint.x+" "+leftUpCornerPoint.y+" "+rightDownCornerPoint.x+" "+rightDownCornerPoint.y);
             Parallel.For(0,height,new ParallelOptions{ MaxDegreeOfParallelism = Environment.ProcessorCount },i => 
                 {
-                    fractal.Calculate(GetLeftUpCornerPoint(), new Point(width, height), GetStep(leftUpCornerPoint, rightDownCornerPoint),i);
+                    fractal.Calculate(100,GetLeftUpCornerPoint(), new Point(width, height), GetStep(leftUpCornerPoint, rightDownCornerPoint),i);
                 });
 
             /*for (int i = 0; i < height; i+=3)

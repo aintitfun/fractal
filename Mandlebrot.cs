@@ -7,13 +7,13 @@ namespace fractal
     {
         public Mandlebrot(Point pointsToProcess)
         {
-            MaxIterations=100;
+            //MaxIterations=100;
             Center=new Point(-0.02,-0.3);
             ScaleFactor=0.004;
             listIterationValues=new int[(int)pointsToProcess.x*(int)pointsToProcess.y];   
 
         }
-        public override void Calculate(Point leftUpCorner,Point pointsToProcess, Point step, int line)
+        public override void Calculate(int maxIterations,Point leftUpCorner,Point pointsToProcess, Point step, int line)
         {
             int [] listLineIterations=new int[(int)pointsToProcess.y];
             double xpos = leftUpCorner.x;
@@ -28,7 +28,7 @@ namespace fractal
                     double x2 = xpos * xpos;
                     double y2 = ypos * ypos;
                     bool exits = false;
-                    for (int k = 0; k < MaxIterations; k++)
+                    for (int k = 0; k < maxIterations; k++)
                     {
                         x2 = x * x;
                         y2 = y * y;

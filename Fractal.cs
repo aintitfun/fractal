@@ -8,7 +8,7 @@ namespace fractal
         public double ScaleFactor{get;set;}
         public int[] listIterationValues { get; set; }
         public abstract List<int> Calculate(Point leftUpCorner, Point pointsToProcess, Point step);
-        public abstract void Calculate(Point leftUpCorner, Point pointsToProcess, Point step, int line);
+        public abstract void Calculate(int maxIterations,Point leftUpCorner, Point pointsToProcess, Point step, int line);
 
     }
 }
