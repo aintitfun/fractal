@@ -4,6 +4,6 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)gtksharp\3.22.25.128\build\GtkSharp.targets" Condition="Exists('$(NuGetPackageRoot)gtksharp\3.22.25.128\build\GtkSharp.targets')" />
+    <Import Project="$(NuGetPackageRoot)gtksharp/3.22.25.128/build/GtkSharp.targets" Condition="Exists('$(NuGetPackageRoot)gtksharp/3.22.25.128/build/GtkSharp.targets')" />
   </ImportGroup>
 </Project>

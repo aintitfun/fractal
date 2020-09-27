@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Users\\papa\\Documents\\fractal\\fractal.csproj": {}
+    "/home/papa/fuentes/fractal/fractal.csproj": {}
   },
   "projects": {
-    "F:\\Users\\papa\\Documents\\fractal\\fractal.csproj": {
+    "/home/papa/fuentes/fractal/fractal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Users\\papa\\Documents\\fractal\\fractal.csproj",
+        "projectUniqueName": "/home/papa/fuentes/fractal/fractal.csproj",
         "projectName": "fractal",
-        "projectPath": "F:\\Users\\papa\\Documents\\fractal\\fractal.csproj",
-        "packagesPath": "C:\\Users\\papa\\.nuget\\packages\\",
-        "outputPath": "F:\\Users\\papa\\Documents\\fractal\\obj\\",
+        "projectPath": "/home/papa/fuentes/fractal/fractal.csproj",
+        "packagesPath": "/home/papa/.nuget/packages/",
+        "outputPath": "/home/papa/fuentes/fractal/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\papa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/papa/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,15 +57,11 @@
               "version": "[3.0.1, 3.0.1]"
             },
             {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
               "version": "[3.0.3, 3.0.3]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.0.0, 3.0.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
               "version": "[3.0.0, 3.0.0]"
             }
           ],
@@ -76,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
         }
       }
     }

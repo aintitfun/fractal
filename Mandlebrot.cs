@@ -18,7 +18,7 @@ namespace fractal
         {
             List<int> listLineIterations=new List<int>();
             double xpos = leftUpCorner.x;
-            double ypos = leftUpCorner.y*line;
+            double ypos = leftUpCorner.y+(line*step.y);
             /*for (double i = 0; i < pointsToProcess.y; i++)
             {*/
                 for (double j = 0; j < pointsToProcess.x; j++)
