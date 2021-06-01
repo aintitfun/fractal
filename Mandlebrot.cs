@@ -34,7 +34,7 @@ namespace fractal
                         y2 = y * y;
                         y = 2 * x * y + ypos;
                         x = x2 - y2 + xpos;
-                        if (x * x + y * y > 4)
+                        if (x * x + y * y > 2)
                         {
                             listIterationValues[line*(int)pointsToProcess.x+(int)j]=k;
                             exits = true;
@@ -42,7 +42,7 @@ namespace fractal
                         }
                     }
                     if (exits == false)
-                        listIterationValues[line*(int)pointsToProcess.x+(int)j]=230;
+                        listIterationValues[line*(int)pointsToProcess.x+(int)j]=0;
 
                     xpos += step.x;
                 }

@@ -3,7 +3,7 @@ using Cairo;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-
+using System.Diagnostics;
 namespace fractal
 {
     public class Screen
@@ -49,28 +49,49 @@ namespace fractal
             Point leftUpCornerPoint=GetLeftUpCornerPoint();
             Point rightDownCornerPoint=GetRightDownCornerPoint();
             Console.WriteLine("corners: "+leftUpCornerPoint.x+" "+leftUpCornerPoint.y+" "+rightDownCornerPoint.x+" "+rightDownCornerPoint.y);
-            Parallel.For(0,height,new ParallelOptions{ MaxDegreeOfParallelism = Environment.ProcessorCount },i => 
+            var s=new Stopwatch(); 
+            s.Start();
+            Parallel.For(0,height,new ParallelOptions{ MaxDegreeOfParallelism = 4 },i => 
                 {
                     fractal.Calculate(100,GetLeftUpCornerPoint(), new Point(width, height), GetStep(leftUpCornerPoint, rightDownCornerPoint),i);
                 });
-
+            s.Stop();
+            Console.WriteLine("elapsed calculation: "+s.ElapsedMilliseconds);
             /*for (int i = 0; i < height; i+=3)
             {
                 fractal.Calculate(GetLeftUpCornerPoint(), new Point(width, height), GetStep(leftUpCornerPoint, rightDownCornerPoint),i);
             }*/
-                
-            for (int i=0;i<height;i++)
+            s.Restart();   
+            /*Parallel.For(0,height,new ParallelOptions{ MaxDegreeOfParallelism = 1 },i => 
             {
                 for (int j=0;j<width;j++)
                 {
                     int iterationValue=fractal.listIterationValues[i*width+j];
-                    cr.SetSourceRGB (Math.Sin(iterationValue), Math.Cos(iterationValue), Math.Cos(iterationValue));
+                    cr.SetSourceRGB (iterationValue, iterationValue, iterationValue);
                     //cr.SetSourceRGB (1, 1, 1);
                     cr.Rectangle(j,i,1,1);
                     cr.Fill();
 
                 }
+            }); */
+            for (int i=0;i<height;i++)
+            {
+                for (int j=0;j<width;j++)
+                {
+                    int iterationValue=fractal.listIterationValues[i*width+j];
+                    //cr.SetSourceRGB (iterationValue, iterationValue, iterationValue);
+                    if (iterationValue>0)
+                    {
+                        cr.SetSourceRGB (Math.Cos(iterationValue), Math.Sin(iterationValue), Math.Cos(iterationValue));
+                        cr.Rectangle(j,i,1,1);
+                        cr.Fill();
+ 
+                    }
+                }
             }
+
+            s.Stop();
+            Console.WriteLine("elapsed paint: "+s.ElapsedMilliseconds);
         }
     }
 }

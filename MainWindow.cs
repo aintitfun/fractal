@@ -2,7 +2,6 @@ using System;
 using Gtk;
 using UI = Gtk.Builder.ObjectAttribute;
 
-
 namespace fractal
 {
     public class MainWindow : Window
@@ -33,6 +32,7 @@ namespace fractal
         {
             /*if (refreshClicked)
             {*/
+            
                 if (fractal == null)
                     fractal=new Mandlebrot(new Point(PictureFrame.Window.Width, PictureFrame.Window.Height));
                 Widget widget = o as Widget;
