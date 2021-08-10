@@ -13,7 +13,7 @@ namespace fractal
             listIterationValues=new int[(int)pointsToProcess.x*(int)pointsToProcess.y];   
 
         }
-        public override void Calculate(int maxIterations,Point leftUpCorner,Point pointsToProcess, Point step, int line)
+        public override void Calculate(int maxIterations,int boilOut,Point leftUpCorner,Point pointsToProcess, Point step, int line)
         {
             int [] listLineIterations=new int[(int)pointsToProcess.y];
             double xpos = leftUpCorner.x;
@@ -34,7 +34,7 @@ namespace fractal
                         y2 = y * y;
                         y = 2 * x * y + ypos;
                         x = x2 - y2 + xpos;
-                        if (x * x + y * y > 2)
+                        if (x * x + y * y > boilOut)
                         {
                             listIterationValues[line*(int)pointsToProcess.x+(int)j]=k;
                             exits = true;
@@ -53,7 +53,7 @@ namespace fractal
             return listIterationValues;*/
             //listIterationValues[(int)pointsToProcess.x*line]=listLineIterations;
         }
-        public override List<int> Calculate(Point leftUpCorner, Point pointsToProcess, Point step)
+        public override List<int> Calculate(int maxIterations,int boilOut,Point leftUpCorner, Point pointsToProcess, Point step)
         {
             Console.WriteLine(ScaleFactor+" " + Center.x+" "+Center.y);
             List<int> listIterationValues=new List<int>();
@@ -75,7 +75,7 @@ namespace fractal
                         y2=y*y;
                         y=2*x*y+ypos;
                         x=x2-y2+xpos;
-                        if (x*x+y*y>4)
+                        if (x*x+y*y>boilOut)
                         {
                             listIterationValues.Add(k);
                             exits=true;

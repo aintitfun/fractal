@@ -12,7 +12,6 @@
 /home/papa/Documentos/fuentes/fractal/bin/Debug/net5.0/GLibSharp.dll
 /home/papa/Documentos/fuentes/fractal/bin/Debug/net5.0/GtkSharp.dll
 /home/papa/Documentos/fuentes/fractal/bin/Debug/net5.0/PangoSharp.dll
-/home/papa/Documentos/fuentes/fractal/obj/Debug/net5.0/fractal.csprojAssemblyReference.cache
 /home/papa/Documentos/fuentes/fractal/obj/Debug/net5.0/fractal.GeneratedMSBuildEditorConfig.editorconfig
 /home/papa/Documentos/fuentes/fractal/obj/Debug/net5.0/fractal.AssemblyInfoInputs.cache
 /home/papa/Documentos/fuentes/fractal/obj/Debug/net5.0/fractal.AssemblyInfo.cs
@@ -22,3 +21,4 @@
 /home/papa/Documentos/fuentes/fractal/obj/Debug/net5.0/ref/fractal.dll
 /home/papa/Documentos/fuentes/fractal/obj/Debug/net5.0/fractal.pdb
 /home/papa/Documentos/fuentes/fractal/obj/Debug/net5.0/fractal.genruntimeconfig.cache
+/home/papa/Documentos/fuentes/fractal/obj/Debug/net5.0/fractal.csproj.AssemblyReference.cache

@@ -53,7 +53,7 @@ namespace fractal
             s.Start();
             Parallel.For(0,height,new ParallelOptions{ MaxDegreeOfParallelism = 4 },i => 
                 {
-                    fractal.Calculate(100,GetLeftUpCornerPoint(), new Point(width, height), GetStep(leftUpCornerPoint, rightDownCornerPoint),i);
+                    fractal.Calculate(100,2,GetLeftUpCornerPoint(), new Point(width, height), GetStep(leftUpCornerPoint, rightDownCornerPoint),i);
                 });
             s.Stop();
             Console.WriteLine("elapsed calculation: "+s.ElapsedMilliseconds);
@@ -83,12 +83,16 @@ namespace fractal
                     if (iterationValue>0)
                     {
                         cr.SetSourceRGB (Math.Cos(iterationValue), Math.Sin(iterationValue), Math.Cos(iterationValue));
-                        cr.Rectangle(j,i,1,1);
-                        cr.Fill();
- 
+                        //cr.Rectangle(j,i,1,1);
+                        //cr.Fill();
+
+                        cr.MoveTo(new PointD(j,i));
+                        cr.LineTo(new PointD(j,i+1));
+                        //cr.Stroke();
                     }
                 }
             }
+            cr.Stroke();
 
             s.Stop();
             Console.WriteLine("elapsed paint: "+s.ElapsedMilliseconds);

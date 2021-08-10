@@ -15,6 +15,18 @@
             "stopAtEntry": false,
             "console": "internalConsole"
         },
+        
+        {
+            "name": ".NET Core Launch (console)2",
+            "type": "net5.0",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/bin/Debug/net5.0/fractal.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
         {
             "name": ".NET Core Attach",
             "type": "coreclr",
